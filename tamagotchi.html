@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Тамагочи</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tamagotchi.css" />
+</head>
+<body class="tamagotchi-page">
+  <a href="index.html" class="back-btn">← Назад</a>
+
+
+  <div class="pet-select" id="typeSelect">
+    <h2>Выбери своего питомца</h2>
+    <div class="pet-options">
+      <div class="pet-option" data-type="cat">🐱</div>
+      <div class="pet-option" data-type="dog">🐶</div>
+      <div class="pet-option" data-type="bird">🐦</div>
+    </div>
+  </div>
+
+  <div class="pet-select" id="nameSelect" style="display: none;">
+    <h2>Как его зовут?</h2>
+    <input type="text" id="pet-name-input" maxlength="12" placeholder="Например: Дружок" />
+    <button id="confirm-name-btn">✅ Готово</button>
+  </div>
+
+  <div class="tamagotchi-container" id="mainContainer" style="display: none;">
+    <h1>🧸 Тамагочи</h1>
+    
+    <div class="pet-area">
+      <div class="pet" id="pet">●</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span>Голод:</span>
+        <div class="bar"><div id="hunger-bar" class="fill"></div></div>
+      </div>
+      <div class="stat">
+        <span>Счастье:</span>
+        <div class="bar"><div id="happiness-bar" class="fill"></div></div>
+      </div>
+      <div class="stat">
+        <span>Энергия:</span>
+        <div class="bar"><div id="energy-bar" class="fill"></div></div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="feed-btn">🍽️ Покормить</button>
+      <button id="play-btn">🎮 Поиграть</button>
+      <button id="sleep-btn">😴 Уложить спать</button>
+    </div>
+    
+    <div id="message">Привет! Позаботься обо мне 💙</div>
+    <div id="sleep-timer"></div>
+    
+    <button id="reset-btn" class="reset-btn">🔄 Сбросить питомца</button>
+  </div>
+
+  <script src="js/tamagotchi.js"></script>
+</body>
+</html>

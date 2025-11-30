@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Аквариум</title>
+  <link rel="stylesheet" href="css/aquarium.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="index.html" class="back-btn">
+  ← Назад
+</a>
+  <button id="addFishBtn" class="add-fish-btn">+ Рыбка</button>
+  <button id="modeBtn" class="mode-btn">Корм</button>
+  <button id="resetBtn" class="reset-btn">🔄 Сбросить</button>
+
+  <div class="aquarium" id="aquarium">
+    <div class="sand"></div>
+  </div>
+
+  <div class="pet-select" id="petSelect">
+    <h2>Выбери своего питомца</h2>
+    <div class="pet-options">
+      <div class="pet-option" data-pet="🐋">🐋</div>
+      <div class="pet-option" data-pet="🦈">🦈</div>
+      <div class="pet-option" data-pet="🦑">🦑</div>
+    </div>
+  </div>
+
+  <script src="js/aquarium.js"></script>
+</body>
+</html>

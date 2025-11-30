@@ -1,0 +1,194 @@
+body {
+  background: #0a111a;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.aquarium {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 30% 0%, rgba(100, 180, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 70% 0%, rgba(120, 200, 255, 0.06) 0%, transparent 45%),
+    linear-gradient(to bottom, #0a1929 0%, #0d1b2f 60%, #132338 100%);
+  overflow: hidden;
+}
+
+.sand {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: 
+    linear-gradient(to top, #3a3f47, #2a3540),
+    url("image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 25 5, 50 10 T 100 10 L 100 20 L 0 20 Z' fill='%233d4552' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 200px 40px;
+  border-top: 1px solid #404a55;
+}
+
+.seaweed {
+  position: absolute;
+  bottom: 90px;
+  width: 20px;
+  z-index: 4;
+  opacity: 0.65;
+  transform-origin: bottom center;
+  animation: sway 12s infinite ease-in-out;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(2deg); }
+}
+
+.decoration-item {
+  position: absolute;
+  bottom: 90px;
+  z-index: 5;
+  opacity: 0.7;
+}
+
+.fish {
+  position: absolute;
+  font-size: 1.6rem;
+  user-select: none;
+  z-index: 10;
+}
+
+.pet {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(120, 200, 255, 0.5));
+  z-index: 20;
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.wave-pulse {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(150, 220, 255, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 6;
+  animation: pulse 1.2s ease-out forwards;
+}
+
+@keyframes pulse {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    border-width: 0;
+  }
+}
+
+.food {
+  position: absolute;
+  font-size: 2.2rem;
+  z-index: 8;
+  pointer-events: none;
+  animation: sink 5s linear forwards;
+  color: #8B4513;
+  text-shadow: 0 0 6px rgba(180, 120, 80, 0.6);
+  opacity: 0.98;
+}
+
+@keyframes sink {
+  to {
+    transform: translateY(85vh);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(200, 230, 255, 0.5);
+  border-radius: 50%;
+  bottom: 90px;
+  animation: rise 6s infinite ease-in;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-100vh) translateX(15px);
+    opacity: 0;
+  }
+}
+
+.pet-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 41, 0.95);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  color: #e0eaf5;
+}
+
+.pet-select h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.pet-options {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.pet-option {
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.pet-option:hover {
+  transform: scale(1.25);
+}
+
+
+.add-fish-btn {
+  top: 15px;
+  right: 15px;
+  background: rgba(40, 60, 90, 0.7);
+  color: #b0d0f0;
+}
+
+.mode-btn {
+  bottom: 55px;
+  right: 15px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background: rgba(50, 70, 100, 0.6);
+  color: #a0c0e0;
+  border: 1px solid rgba(100, 140, 180, 0.4);
+}
+
+.mode-btn.active {
+  background: rgba(70, 100, 140, 0.8);
+  color: #e0f0ff;
+}
+
+.reset-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background: rgba(50, 50, 70, 0.6);
+  color: #a0b0c0;
+  border: 1px solid rgba(100, 120, 150, 0.4);
+}

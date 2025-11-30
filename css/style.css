@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #1a1f2b, #1e2433, #222831);
+  overflow: hidden;
+  color: #e0e6f0;
+}
+
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(69, 89, 120, 0.12), transparent 70%);
+  z-index: 1;
+  animation: drift 40s infinite linear;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+  100% { transform: translate(-200px, -150px) rotate(360deg); opacity: 0.3; }
+}
+
+.menu-container {
+  position: relative;
+  z-index: 10;
+  background: rgba(28, 33, 45, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 2.6rem 2rem;
+  width: 90%;
+  max-width: 410px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(80, 90, 120, 0.2);
+  border: 1px solid rgba(60, 70, 90, 0.3);
+  text-align: center;
+}
+
+.menu-container h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #e6edf8;
+  letter-spacing: -0.4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.game-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 1.1rem;
+  margin: 0.9rem 0;
+  font-size: 1.22rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #d1e0f0;
+  background: rgba(45, 55, 75, 0.6);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(70, 85, 110, 0.3);
+}
+
+.game-btn:hover {
+  background: rgba(55, 68, 92, 0.8);
+  color: #f0f6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 16px;
+  background: rgba(30, 40, 60, 0.7);
+  color: #ccd6e0;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-btn:hover {
+  background: rgba(50, 70, 100, 0.8);
+}
+.reset-btn,
+.add-fish-btn,
+.mode-btn {
+  position: absolute;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  text-decoration: none;
+  display: inline-block;
+  color: #ccd6e0;
+  background: rgba(30, 40, 60, 0.7);
+  transition: background 0.2s;
+}
+
+.back-btn:hover,
+.reset-btn:hover,
+.add-fish-btn:hover,
+.mode-btn:hover {
+  background: rgba(50, 70, 100, 0.8);
+}

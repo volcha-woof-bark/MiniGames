@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Печатай быстрее!</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/typing.css" />
+</head>
+<body>
+  <a href="index.html" class="back-btn">
+    ← Назад
+  </a>
+
+  <div class="typing-game">
+    <h1>⌨️ Печатай быстрее!</h1>
+    <p>Набери слово как можно быстрее:</p>
+    <div id="target-word">...</div>
+    <input 
+      type="text" 
+      id="user-input" 
+      autocomplete="off" 
+      autocapitalize="off"
+      spellcheck="false"
+      placeholder="Начни печатать..." 
+    />
+    <div id="timer">Время: —</div>
+  </div>
+
+  <script src="js/typing.js"></script>
+</body>
+</html>
