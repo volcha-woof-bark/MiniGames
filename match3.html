@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3 в ряд</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/match3.css" />
+</head>
+<body class="match3-page">
+  <a href="index.html" class="back-btn">← Назад</a>
+  
+  <div class="match3-container">
+    <div class="header">
+      <h1>🌀 3 в ряд</h1>
+      <div id="score">Счёт: 0</div>
+      <div id="best">Рекорд: 0</div>
+      <button id="reset-btn">🔄 Новая игра</button>
+    </div>
+    
+    <div id="grid"></div>
+  </div>
+  
+  <audio id="match-sound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA"></audio>
+  <audio id="select-sound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA"></audio>
+  <audio id="reset-sound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA"></audio>
+
+  <script src="js/match3.js"></script>
+</body>
+</html>
