@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Запомни последовательность</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/simon.css" />
+</head>
+<body class="simon-page">
+  <a href="index.html" class="back-btn">← Назад</a>
+  
+  <div class="simon-container">
+    <h1>🧠 Запомни последовательность</h1>
+    
+    <div class="stats">
+      <div id="level">Уровень: 1</div>
+      <div id="best">Рекорд: 0</div>
+    </div>
+
+    <div id="simon-board">
+      <div class="pad" data-color="red"></div>
+      <div class="pad" data-color="blue"></div>
+      <div class="pad" data-color="green"></div>
+      <div class="pad" data-color="yellow"></div>
+    </div>
+
+    <div class="instructions">
+      Повторите последовательность цветов!
+    </div>
+
+    <button id="start-btn">▶ Начать</button>
+  </div>
+
+  <script src="js/simon.js"></script>
+</body>
+</html>
