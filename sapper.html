@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сапёр</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sapper.css" />
+</head>
+<body class="sapper-page">
+  <a href="index.html" class="back-btn">← Назад</a>
+  
+  <div class="sapper-container">
+    <h1>💣 Сапёр</h1>
+    
+    <div id="start-screen">
+      <p>Кликните, чтобы начать игру</p>
+      <button id="start-btn">▶ Начать</button>
+    </div>
+
+    <div id="game-ui" style="display: none;">
+      <div class="game-info">
+        <div class="mines-count">Мины: <span id="mine-count">15</span></div>
+        <button id="reset-btn">🙂</button>
+        <div class="timer">Время: <span id="time">0</span>с</div>
+      </div>
+      <div class="flag-toggle-container">
+        <button id="flag-toggle">🚩 Режим флага</button>
+      </div>
+
+      <div id="game-board"></div>
+
+      <div class="instructions">
+        Нажмите на эмодзи, чтобы перезапустить игру.
+      </div>
+    </div>
+  </div>
+
+  <script src="js/sapper.js"></script>
+</body>
+</html>
